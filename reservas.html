@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Dentistas.com.pa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Dentistas.com.pa Logo">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#testimonios">Testimonios</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="reservas.html" class="btn btn-primary">Agenda tu cita</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="reservation-page">
+        <section class="reservation-form-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Agenda tu Cita</h2>
+                    <div class="section-divider"></div>
+                    <p>Completa el formulario para reservar tu cita. ¡Te esperamos!</p>
+                </div>
+                <form id="booking-form" class="booking-form">
+                    <div class="form-step" id="step-1">
+                        <h3>1. Elige el Servicio</h3>
+                        <div class="service-selection">
+                            <div class="service-box" data-value="limpieza">
+                                <h5>Limpieza Dental</h5>
+                                <p class="price">$50</p>
+                            </div>
+                            <div class="service-box" data-value="blanqueamiento">
+                                <h5>Blanqueamiento Dental</h5>
+                                <p class="price">$250</p>
+                            </div>
+                            <div class="service-box" data-value="implantes">
+                                <h5>Implantes Dentales</h5>
+                                <p class="price">Desde $1,200</p>
+                            </div>
+                            <div class="service-box" data-value="ortodoncia">
+                                <h5>Ortodoncia</h5>
+                                <p class="price">Consulta</p>
+                            </div>
+                            <div class="service-box" data-value="carillas">
+                                <h5>Carillas Dentales</h5>
+                                <p class="price">Desde $400</p>
+                            </div>
+                            <div class="service-box" data-value="protesis">
+                                <h5>Prótesis Dentales</h5>
+                                <p class="price">Consulta</p>
+                            </div>
+                            <input type="hidden" id="service-select" name="service" required>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step-2">
+                        <h3>2. Selecciona Fecha y Hora</h3>
+                        <div class="date-time-selection">
+                            <div class="form-group">
+                                <label for="date-picker">Elige una fecha:</label>
+                                <input type="date" id="date-picker" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time-select">Horarios disponibles:</label>
+                                <select id="time-select" name="time" required>
+                                    <option value="" disabled selected>Selecciona una hora</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-step" id="step-3">
+                        <h3>3. Datos Personales</h3>
+                        <div class="personal-details">
+                            <div class="form-group">
+                                <input type="text" id="full-name" name="name" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="submit" class="btn btn-primary">Confirmar Cita</button>
+                    </div>
+                </form>
+                <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                    <h4>¡Gracias por tu reserva!</h4>
+                    <p>Hemos recibido tu solicitud y te contactaremos pronto para confirmar los detalles.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dentistas.com.pa - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/reservas.js"></script>
+</body>
+</html>
